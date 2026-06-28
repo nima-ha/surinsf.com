@@ -32,7 +32,7 @@ export function Hero() {
     <section
       ref={sectionRef}
       id="hero"
-      className="relative w-full min-h-screen overflow-hidden bg-neutral-900 cursor-none"
+      className="relative w-full min-h-screen overflow-hidden bg-neutral-900"
       onMouseMove={handleMouseMove}
       style={{ '--mouse-x': 'calc(42vw - 200px)', '--mouse-y': 'calc(28vh - 200px)' } as React.CSSProperties}
     >
@@ -41,13 +41,13 @@ export function Hero() {
           src={hero.backgroundImage}
           alt="Hero Background"
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: 'blur(15px) brightness(0.7)' }}
+          style={{ filter: 'brightness(0.6)' }}
           onLoad={() => setImageLoaded(true)}
         />
       </div>
 
       <div
-        className={cn('absolute top-0 left-0 overflow-hidden pointer-events-none z-20', isLoaded && imageLoaded ? 'opacity-100' : 'opacity-0')}
+        className={cn('hidden lg:block absolute top-0 left-0 overflow-hidden pointer-events-none z-20', isLoaded && imageLoaded ? 'opacity-100' : 'opacity-0')}
         style={{ width: boxSize, height: boxSize, transform: 'translate3d(var(--mouse-x), var(--mouse-y), 0)', willChange: 'transform' }}
       >
         <div className="absolute inset-0" style={{ transform: 'translate3d(calc(var(--mouse-x) * -1), calc(var(--mouse-y) * -1), 0)', width: '100vw', height: '100vh', willChange: 'transform' }}>
@@ -56,7 +56,7 @@ export function Hero() {
       </div>
 
       <div
-        className={cn('absolute top-0 left-0 pointer-events-none z-20', isLoaded && imageLoaded ? 'opacity-100' : 'opacity-0')}
+        className={cn('hidden lg:block absolute top-0 left-0 pointer-events-none z-20', isLoaded && imageLoaded ? 'opacity-100' : 'opacity-0')}
         style={{ width: boxSize, height: boxSize, border: '1px solid rgba(255,255,255,0.4)', transform: 'translate3d(var(--mouse-x), var(--mouse-y), 0)', willChange: 'transform' }}
       >
         <div className="absolute inset-0 flex items-center justify-center">

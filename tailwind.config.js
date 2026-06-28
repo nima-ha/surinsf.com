@@ -49,7 +49,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        geist: ['Geist', 'Arial', 'sans-serif'],
+        geist: ['Vazirmatn', 'Geist', 'Arial', 'sans-serif'],
         'geist-mono': ['GeistMono', 'Courier New', 'monospace'],
       },
       fontSize: {
