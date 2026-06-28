@@ -38,7 +38,7 @@ export default function BlogArticleClient({ slug }: { slug: string }) {
           </div>
         </ScrollReveal>
         <div className="aspect-video rounded-2xl overflow-hidden mb-10">
-          <img src={article.img} alt={article.title} className="w-full h-full object-cover" />
+          <img src={article.img} alt={article.title} loading="lazy" className="w-full h-full object-cover" />
         </div>
         <ScrollReveal>
           <div className="space-y-6">

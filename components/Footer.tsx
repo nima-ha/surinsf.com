@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useI18n } from '@/i18n';
-import { Linkedin, MessageCircle, Mail, MapPin } from 'lucide-react';
+import { Linkedin, MessageCircle, Mail, MapPin, Phone } from 'lucide-react';
 
 export default function Footer() {
   const { t } = useI18n();
@@ -24,9 +24,10 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="text-sm font-semibold mb-3 text-white/70">{t.common.contact}</h4>
-            <div className="flex flex-col gap-2 text-sm text-white/40">
-              <div className="flex items-center gap-2"><MapPin size={14} /> {t.contact.info.address}</div>
-              <div className="flex items-center gap-2" dir="ltr"><Mail size={14} /> {t.contact.info.email}</div>
+              <div className="flex flex-col gap-2 text-sm text-white/40">
+                <div className="flex items-center gap-2"><MapPin size={14} /> {t.contact.info.address}</div>
+                <a href="tel:+982122201734" className="flex items-center gap-2 hover:text-brand-400 transition-colors" dir="ltr"><Phone size={14} /> {t.contact.info.phone}</a>
+                <a href="mailto:info@surinsf.com" className="flex items-center gap-2 hover:text-brand-400 transition-colors" dir="ltr"><Mail size={14} /> {t.contact.info.email}</a>
               <div className="flex items-center gap-1 mt-2">
                 <a href="https://linkedin.com/company/surinsf" className="p-2 rounded-full hover:bg-white/10 transition-colors"><Linkedin size={16} /></a>
                 <a href="https://wa.me/989121234567" className="p-2 rounded-full hover:bg-white/10 transition-colors"><MessageCircle size={16} /></a>

@@ -26,7 +26,7 @@ export default function BlogPage() {
               <Link href={`/blog/${a.slug}`} className="block">
                 <article className="glass rounded-2xl overflow-hidden group hover:border-brand-700/40 transition-all duration-500 h-full flex flex-col">
                   <div className="aspect-video overflow-hidden">
-                    <img src={a.img} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img src={a.img} alt={a.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   </div>
                   <div className="p-6 flex-1 flex flex-col">
                     <div className="flex items-center gap-3 mb-3">

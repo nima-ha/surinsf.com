@@ -22,13 +22,13 @@ export default function Home() {
     if (heroRef.current) {
       gsap.fromTo(heroRef.current.querySelectorAll('.float-el'), { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1, stagger: 0.2, ease: 'power3.out', delay: 0.8 });
     }
-    if (bgRef.current) {
+    if (bgRef.current && !matchMedia('(pointer: coarse)').matches) {
       const onMove = (e: MouseEvent) => {
         const x = (e.clientX / window.innerWidth - 0.5) * 20;
         const y = (e.clientY / window.innerHeight - 0.5) * 20;
         gsap.to(bgRef.current, { x, y, duration: 1, ease: 'power2.out' });
       };
-      window.addEventListener('mousemove', onMove);
+      window.addEventListener('mousemove', onMove, { passive: true });
       return () => window.removeEventListener('mousemove', onMove);
     }
   }, []);
@@ -129,7 +129,7 @@ export default function Home() {
                 <Link href={`/products/${p.slug}`} className="block">
                   <div className="glass rounded-2xl overflow-hidden group hover:border-brand-700/40 transition-all duration-500">
                     <div className="aspect-video overflow-hidden">
-                      <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                      <img src={p.img} alt={p.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     </div>
                     <div className="p-5">
                       <span className="text-xs text-brand-400">{p.cat}</span>
@@ -190,7 +190,7 @@ export default function Home() {
                 <Link href={`/blog/${a.slug}`} className="block">
                   <article className="glass rounded-2xl overflow-hidden group hover:border-brand-700/40 transition-all duration-500 h-full flex flex-col">
                     <div className="aspect-video overflow-hidden">
-                      <img src={a.img} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                      <img src={a.img} alt={a.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     </div>
                     <div className="p-5 flex-1 flex flex-col">
                       <div className="flex items-center gap-3 mb-2">

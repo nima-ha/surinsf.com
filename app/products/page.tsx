@@ -22,7 +22,7 @@ export default function ProductsPage() {
               <Link href={`/products/${p.slug}`} className="block">
                 <div className="glass rounded-2xl overflow-hidden group hover:border-brand-700/40 transition-all duration-500">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img src={p.img} alt={p.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   </div>
                   <div className="p-5">
                     <span className="text-xs text-brand-400 uppercase tracking-wider">{p.cat}</span>

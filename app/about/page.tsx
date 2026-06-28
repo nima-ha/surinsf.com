@@ -32,7 +32,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-3">
               {t.about.images.map((img, i) => (
                 <div key={i} className={`aspect-[4/5] rounded-2xl overflow-hidden ${i % 2 === 0 ? '' : 'mt-6'}`}>
-                  <img src={img} alt={t.about.title} className="w-full h-full object-cover" />
+                  <img src={img} alt={t.about.title} loading="lazy" className="w-full h-full object-cover" />
                 </div>
               ))}
             </div>

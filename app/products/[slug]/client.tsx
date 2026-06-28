@@ -36,7 +36,7 @@ export default function ProductClient({ slug }: { slug: string }) {
         <div className="grid md:grid-cols-2 gap-10 items-start">
           <ScrollReveal direction="left">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden">
-              <img src={product.img} alt={product.title} className="w-full h-full object-cover" />
+              <img src={product.img} alt={product.title} loading="lazy" className="w-full h-full object-cover" />
             </div>
           </ScrollReveal>
           <ScrollReveal direction="right">

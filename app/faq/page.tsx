@@ -22,7 +22,7 @@ export default function FAQPage() {
           {t.faq.items.map((item, i) => (
             <ScrollReveal key={i} delay={i * 0.05}>
               <div className="glass rounded-xl overflow-hidden">
-                <button onClick={() => setOpen(open === i ? null : i)} className="w-full flex items-center justify-between p-5 text-left hover:bg-white/5 transition-colors">
+                <button onClick={() => setOpen(open === i ? null : i)} className="w-full flex items-center justify-between p-5 hover:bg-white/5 transition-colors">
                   <span className="font-medium">{item.q}</span>
                   <ChevronDown size={18} className={`text-white/40 transition-transform duration-300 ${open === i ? 'rotate-180' : ''}`} />
                 </button>
