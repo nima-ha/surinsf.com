@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://surinsf-site.task-malt-juvenile.workers.dev/sitemap.xml

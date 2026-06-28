@@ -32,7 +32,7 @@ export default function Home() {
               {t.about.label}
             </span>
           </div>
-          <h1 ref={titleRef} className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] mb-6 text-shadow-glow">
+          <h1 ref={titleRef} className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] mb-6 text-shadow-glow">
             <span className="gradient-text">{t.hero.name}</span>
           </h1>
           <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 float-el">

@@ -2,7 +2,6 @@
 
 import { useI18n } from '@/i18n';
 import ScrollReveal from '@/components/ScrollReveal';
-import { ArrowUpRight } from 'lucide-react';
 
 export default function ProductsPage() {
   const { t } = useI18n();
@@ -20,8 +19,8 @@ export default function ProductsPage() {
           {t.products.items.map((p, i) => (
             <ScrollReveal key={p.title} delay={i * 0.08}>
               <div className="glass rounded-2xl overflow-hidden group hover:border-brand-700/40 transition-all duration-500">
-                <div className="aspect-[4/3] bg-gradient-to-br from-brand-900/30 to-surface-lighter flex items-center justify-center">
-                  <ArrowUpRight className="w-8 h-8 text-brand-400/50 group-hover:text-brand-400 group-hover:scale-110 transition-all" />
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="p-5">
                   <span className="text-xs text-brand-400 uppercase tracking-wider">{p.cat}</span>
