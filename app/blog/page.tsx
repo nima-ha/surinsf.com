@@ -23,22 +23,24 @@ export default function BlogPage() {
         <div className="grid md:grid-cols-3 gap-6">
           {t.blog.articles.map((a, i) => (
             <ScrollReveal key={a.title} delay={i * 0.1}>
-              <article className="glass rounded-2xl overflow-hidden group hover:border-brand-700/40 transition-all duration-500 h-full flex flex-col">
-                <div className="aspect-video overflow-hidden">
-                  <img src={a.img} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                </div>
-                <div className="p-6 flex-1 flex flex-col">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-xs px-2.5 py-1 rounded-full bg-brand-700/20 text-brand-400">{a.cat}</span>
-                    <span className="text-xs text-white/30">{a.date}</span>
+              <Link href={`/blog/${a.slug}`} className="block">
+                <article className="glass rounded-2xl overflow-hidden group hover:border-brand-700/40 transition-all duration-500 h-full flex flex-col">
+                  <div className="aspect-video overflow-hidden">
+                    <img src={a.img} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 group-hover:text-brand-400 transition-colors">{a.title}</h3>
-                  <p className="text-sm text-white/50 leading-relaxed flex-1">{a.excerpt}</p>
-                  <div className="mt-4 flex items-center gap-1 text-sm text-brand-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                    {t.blog.label} <ArrowRight size={14} />
+                  <div className="p-6 flex-1 flex flex-col">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-xs px-2.5 py-1 rounded-full bg-brand-700/20 text-brand-400">{a.cat}</span>
+                      <span className="text-xs text-white/30">{a.date}</span>
+                    </div>
+                    <h3 className="text-lg font-semibold mb-2 group-hover:text-brand-400 transition-colors">{a.title}</h3>
+                    <p className="text-sm text-white/50 leading-relaxed flex-1">{a.excerpt}</p>
+                    <div className="mt-4 flex items-center gap-1 text-sm text-brand-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                      {t.blog.label} <ArrowRight size={14} />
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              </Link>
             </ScrollReveal>
           ))}
         </div>

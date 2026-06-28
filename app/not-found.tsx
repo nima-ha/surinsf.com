@@ -9,10 +9,10 @@ export default function NotFound() {
     <div className="min-h-[70vh] flex items-center justify-center">
       <div className="text-center">
         <div className="text-8xl font-black gradient-text mb-4">404</div>
-        <h1 className="text-2xl font-bold mb-4">صفحه مورد نظر یافت نشد</h1>
-        <p className="text-white/50 mb-8">متأسفانه صفحه‌ای که به دنبال آن هستید وجود ندارد.</p>
+        <h1 className="text-2xl font-bold mb-4">{t.notFound.title}</h1>
+        <p className="text-white/50 mb-8">{t.notFound.desc}</p>
         <Link href="/" className="inline-flex px-8 py-3.5 bg-brand-700 hover:bg-brand-600 text-white rounded-full font-medium transition-all">
-          {t.nav.links[0].label}
+          {t.common.home}
         </Link>
       </div>
     </div>

@@ -114,17 +114,17 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {t.products.items.slice(0, 6).map((p, i) => (
               <ScrollReveal key={p.title} delay={i * 0.08}>
-                <div className="glass rounded-2xl overflow-hidden group hover:border-brand-700/40 transition-all duration-500">
-                  <div className="aspect-video bg-gradient-to-br from-brand-900/30 to-surface-lighter flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-brand-700/20 flex items-center justify-center">
-                      <ArrowUpRight className="w-6 h-6 text-brand-400" />
+                <Link href={`/products/${p.slug}`} className="block">
+                  <div className="glass rounded-2xl overflow-hidden group hover:border-brand-700/40 transition-all duration-500">
+                    <div className="aspect-video overflow-hidden">
+                      <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    </div>
+                    <div className="p-5">
+                      <span className="text-xs text-brand-400">{p.cat}</span>
+                      <h3 className="font-semibold mt-1">{p.title}</h3>
                     </div>
                   </div>
-                  <div className="p-5">
-                    <span className="text-xs text-brand-400">{p.cat}</span>
-                    <h3 className="font-semibold mt-1">{p.title}</h3>
-                  </div>
-                </div>
+                </Link>
               </ScrollReveal>
             ))}
           </div>
@@ -175,19 +175,21 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {t.blog.articles.slice(0, 3).map((a, i) => (
               <ScrollReveal key={a.title} delay={i * 0.1}>
-                <article className="glass rounded-2xl overflow-hidden group hover:border-brand-700/40 transition-all duration-500 h-full flex flex-col">
-                  <div className="aspect-video overflow-hidden">
-                    <img src={a.img} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                  </div>
-                  <div className="p-5 flex-1 flex flex-col">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-xs px-2 py-0.5 rounded-full bg-brand-700/20 text-brand-400">{a.cat}</span>
-                      <span className="text-xs text-white/30">{a.date}</span>
+                <Link href={`/blog/${a.slug}`} className="block">
+                  <article className="glass rounded-2xl overflow-hidden group hover:border-brand-700/40 transition-all duration-500 h-full flex flex-col">
+                    <div className="aspect-video overflow-hidden">
+                      <img src={a.img} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     </div>
-                    <h3 className="font-semibold mb-2 group-hover:text-brand-400 transition-colors">{a.title}</h3>
-                    <p className="text-sm text-white/50 leading-relaxed flex-1">{a.excerpt}</p>
-                  </div>
-                </article>
+                    <div className="p-5 flex-1 flex flex-col">
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className="text-xs px-2 py-0.5 rounded-full bg-brand-700/20 text-brand-400">{a.cat}</span>
+                        <span className="text-xs text-white/30">{a.date}</span>
+                      </div>
+                      <h3 className="font-semibold mb-2 group-hover:text-brand-400 transition-colors">{a.title}</h3>
+                      <p className="text-sm text-white/50 leading-relaxed flex-1">{a.excerpt}</p>
+                    </div>
+                  </article>
+                </Link>
               </ScrollReveal>
             ))}
           </div>

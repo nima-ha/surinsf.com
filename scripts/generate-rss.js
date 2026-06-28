@@ -1,18 +1,17 @@
 const fs = require('fs');
 const path = require('path');
-
 const siteUrl = 'https://surinsf-site.task-malt-juvenile.workers.dev';
 
 const faArticles = [
-  { title: 'راهنمای جامع انتخاب PLC صنعتی', excerpt: 'بررسی انواع PLCهای موجود در بازار و نکات مهم در انتخاب مناسب‌ترین گزینه برای خط تولید شما', date: '2025-06-05', cat: 'اتوماسیون', img: '/images/blog/plc.jpg' },
-  { title: 'اتوماسیون صنعتی و اینترنت اشیاء', excerpt: 'تحول دیجیتال در صنعت با ترکیب اتوماسیون سنتی و فناوری‌های نوین IIoT', date: '2025-05-20', cat: 'فناوری', img: '/images/blog/iot.jpg' },
-  { title: 'استانداردهای بین‌المللی تجهیزات برق', excerpt: 'آشنایی با مهم‌ترین استانداردهای IEC، NEMA و ISO در حوزه تجهیزات برق صنعتی', date: '2025-04-10', cat: 'استانداردها', img: '/images/blog/standards.jpg' },
+  { slug: 'plc-selection-guide', title: 'راهنمای جامع انتخاب PLC صنعتی', excerpt: 'بررسی انواع PLCهای موجود در بازار و نکات مهم در انتخاب مناسب‌ترین گزینه برای خط تولید شما', date: '2025-06-05', cat: 'اتوماسیون', img: '/images/blog/plc.jpg' },
+  { slug: 'industrial-iot', title: 'اتوماسیون صنعتی و اینترنت اشیاء', excerpt: 'تحول دیجیتال در صنعت با ترکیب اتوماسیون سنتی و فناوری‌های نوین IIoT', date: '2025-05-20', cat: 'فناوری', img: '/images/blog/iot.jpg' },
+  { slug: 'electrical-standards', title: 'استانداردهای بین‌المللی تجهیزات برق', excerpt: 'آشنایی با مهم‌ترین استانداردهای IEC، NEMA و ISO در حوزه تجهیزات برق صنعتی', date: '2025-04-10', cat: 'استانداردها', img: '/images/blog/standards.jpg' },
 ];
 
 const enArticles = [
-  { title: 'Complete Guide to Industrial PLC Selection', excerpt: 'Review of available PLCs and key selection criteria for your production line', date: '2025-06-05', cat: 'Automation', img: '/images/blog/plc.jpg' },
-  { title: 'Industrial IoT and Smart Manufacturing', excerpt: 'Digital transformation combining traditional automation with IIoT technologies', date: '2025-05-20', cat: 'Technology', img: '/images/blog/iot.jpg' },
-  { title: 'International Electrical Equipment Standards', excerpt: 'Overview of IEC, NEMA and ISO standards for industrial electrical equipment', date: '2025-04-10', cat: 'Standards', img: '/images/blog/standards.jpg' },
+  { slug: 'plc-selection-guide', title: 'Complete Guide to Industrial PLC Selection', excerpt: 'Review of available PLCs and key selection criteria for your production line', date: '2025-06-05', cat: 'Automation', img: '/images/blog/plc.jpg' },
+  { slug: 'industrial-iot', title: 'Industrial IoT and Smart Manufacturing', excerpt: 'Digital transformation combining traditional automation with IIoT technologies', date: '2025-05-20', cat: 'Technology', img: '/images/blog/iot.jpg' },
+  { slug: 'electrical-standards-en', title: 'International Electrical Equipment Standards', excerpt: 'Overview of IEC, NEMA and ISO standards for industrial electrical equipment', date: '2025-04-10', cat: 'Standards', img: '/images/blog/standards.jpg' },
 ];
 
 function escapeXml(s) {
@@ -20,12 +19,12 @@ function escapeXml(s) {
 }
 
 function itemXml(a, lang) {
-  const link = `${siteUrl}/${lang === 'fa' ? '' : lang}/blog`;
+  const link = `${siteUrl}/${lang === 'fa' ? '' : lang}/blog/${a.slug}`;
   return `
     <item>
       <title>${escapeXml(a.title)}</title>
       <link>${link}</link>
-      <guid isPermaLink="true">${link}#${escapeXml(a.title.replace(/\s+/g, '-'))}</guid>
+      <guid isPermaLink="true">${link}</guid>
       <description>${escapeXml(a.excerpt)}</description>
       <category>${escapeXml(a.cat)}</category>
       <pubDate>${new Date(a.date).toUTCString()}</pubDate>
@@ -50,6 +49,5 @@ const rss = `<?xml version="1.0" encoding="UTF-8"?>
   </channel>
 </rss>`;
 
-const outPath = path.join(__dirname, '..', 'public', 'rss.xml');
-fs.writeFileSync(outPath, rss, 'utf-8');
-console.log('✅ RSS feed generated:', outPath);
+fs.writeFileSync(path.join(__dirname, '..', 'public', 'rss.xml'), rss, 'utf-8');
+console.log('RSS generated:', path.join(__dirname, '..', 'public', 'rss.xml'));

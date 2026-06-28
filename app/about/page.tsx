@@ -20,7 +20,7 @@ export default function AboutPage() {
               <p className="text-white/60 leading-relaxed text-lg">{t.about.description}</p>
               <div className="grid grid-cols-2 gap-4">
                 {t.about.stats.map(s => (
-                  <div key={s.label} className="glass p-6 rounded-2xl text-center">
+                  <div key={s.label} className="glass p-6 rounded-2xl text-center hover:border-brand-700/30 transition-all duration-500">
                     <div className="text-2xl font-bold gradient-text">{s.value}</div>
                     <div className="text-sm text-white/50">{s.label}</div>
                   </div>
@@ -30,8 +30,10 @@ export default function AboutPage() {
           </ScrollReveal>
           <ScrollReveal direction="right">
             <div className="grid grid-cols-2 gap-3">
-              {[1, 2, 3, 4].map(i => (
-                <div key={i} className={`aspect-[4/5] rounded-2xl bg-gradient-to-br from-brand-900/20 to-surface-lighter ${i % 2 === 0 ? 'mt-6' : ''}`} />
+              {t.about.images.map((img, i) => (
+                <div key={i} className={`aspect-[4/5] rounded-2xl overflow-hidden ${i % 2 === 0 ? '' : 'mt-6'}`}>
+                  <img src={img} alt={t.about.title} className="w-full h-full object-cover" />
+                </div>
               ))}
             </div>
           </ScrollReveal>

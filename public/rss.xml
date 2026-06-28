@@ -5,13 +5,13 @@
     <link>https://surinsf-site.task-malt-juvenile.workers.dev</link>
     <description>مطالب تخصصی در حوزه برق صنعتی، اتوماسیون و ابزار دقیق</description>
     <language>fa</language>
-    <lastBuildDate>Sun, 28 Jun 2026 12:53:47 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 15:03:35 GMT</lastBuildDate>
     <atom:link href="https://surinsf-site.task-malt-juvenile.workers.dev/rss.xml" rel="self" type="application/rss+xml"/>
     
     <item>
       <title>راهنمای جامع انتخاب PLC صنعتی</title>
-      <link>https://surinsf-site.task-malt-juvenile.workers.dev//blog</link>
-      <guid isPermaLink="true">https://surinsf-site.task-malt-juvenile.workers.dev//blog#راهنمای-جامع-انتخاب-PLC-صنعتی</guid>
+      <link>https://surinsf-site.task-malt-juvenile.workers.dev//blog/plc-selection-guide</link>
+      <guid isPermaLink="true">https://surinsf-site.task-malt-juvenile.workers.dev//blog/plc-selection-guide</guid>
       <description>بررسی انواع PLCهای موجود در بازار و نکات مهم در انتخاب مناسب‌ترین گزینه برای خط تولید شما</description>
       <category>اتوماسیون</category>
       <pubDate>Thu, 05 Jun 2025 00:00:00 GMT</pubDate>
@@ -22,8 +22,8 @@
     </item>
     <item>
       <title>اتوماسیون صنعتی و اینترنت اشیاء</title>
-      <link>https://surinsf-site.task-malt-juvenile.workers.dev//blog</link>
-      <guid isPermaLink="true">https://surinsf-site.task-malt-juvenile.workers.dev//blog#اتوماسیون-صنعتی-و-اینترنت-اشیاء</guid>
+      <link>https://surinsf-site.task-malt-juvenile.workers.dev//blog/industrial-iot</link>
+      <guid isPermaLink="true">https://surinsf-site.task-malt-juvenile.workers.dev//blog/industrial-iot</guid>
       <description>تحول دیجیتال در صنعت با ترکیب اتوماسیون سنتی و فناوری‌های نوین IIoT</description>
       <category>فناوری</category>
       <pubDate>Tue, 20 May 2025 00:00:00 GMT</pubDate>
@@ -34,8 +34,8 @@
     </item>
     <item>
       <title>استانداردهای بین‌المللی تجهیزات برق</title>
-      <link>https://surinsf-site.task-malt-juvenile.workers.dev//blog</link>
-      <guid isPermaLink="true">https://surinsf-site.task-malt-juvenile.workers.dev//blog#استانداردهای-بین‌المللی-تجهیزات-برق</guid>
+      <link>https://surinsf-site.task-malt-juvenile.workers.dev//blog/electrical-standards</link>
+      <guid isPermaLink="true">https://surinsf-site.task-malt-juvenile.workers.dev//blog/electrical-standards</guid>
       <description>آشنایی با مهم‌ترین استانداردهای IEC، NEMA و ISO در حوزه تجهیزات برق صنعتی</description>
       <category>استانداردها</category>
       <pubDate>Thu, 10 Apr 2025 00:00:00 GMT</pubDate>
@@ -47,8 +47,8 @@
     
     <item>
       <title>Complete Guide to Industrial PLC Selection</title>
-      <link>https://surinsf-site.task-malt-juvenile.workers.dev/en/blog</link>
-      <guid isPermaLink="true">https://surinsf-site.task-malt-juvenile.workers.dev/en/blog#Complete-Guide-to-Industrial-PLC-Selection</guid>
+      <link>https://surinsf-site.task-malt-juvenile.workers.dev/en/blog/plc-selection-guide</link>
+      <guid isPermaLink="true">https://surinsf-site.task-malt-juvenile.workers.dev/en/blog/plc-selection-guide</guid>
       <description>Review of available PLCs and key selection criteria for your production line</description>
       <category>Automation</category>
       <pubDate>Thu, 05 Jun 2025 00:00:00 GMT</pubDate>
@@ -59,8 +59,8 @@
     </item>
     <item>
       <title>Industrial IoT and Smart Manufacturing</title>
-      <link>https://surinsf-site.task-malt-juvenile.workers.dev/en/blog</link>
-      <guid isPermaLink="true">https://surinsf-site.task-malt-juvenile.workers.dev/en/blog#Industrial-IoT-and-Smart-Manufacturing</guid>
+      <link>https://surinsf-site.task-malt-juvenile.workers.dev/en/blog/industrial-iot</link>
+      <guid isPermaLink="true">https://surinsf-site.task-malt-juvenile.workers.dev/en/blog/industrial-iot</guid>
       <description>Digital transformation combining traditional automation with IIoT technologies</description>
       <category>Technology</category>
       <pubDate>Tue, 20 May 2025 00:00:00 GMT</pubDate>
@@ -71,8 +71,8 @@
     </item>
     <item>
       <title>International Electrical Equipment Standards</title>
-      <link>https://surinsf-site.task-malt-juvenile.workers.dev/en/blog</link>
-      <guid isPermaLink="true">https://surinsf-site.task-malt-juvenile.workers.dev/en/blog#International-Electrical-Equipment-Standards</guid>
+      <link>https://surinsf-site.task-malt-juvenile.workers.dev/en/blog/electrical-standards-en</link>
+      <guid isPermaLink="true">https://surinsf-site.task-malt-juvenile.workers.dev/en/blog/electrical-standards-en</guid>
       <description>Overview of IEC, NEMA and ISO standards for industrial electrical equipment</description>
       <category>Standards</category>
       <pubDate>Thu, 10 Apr 2025 00:00:00 GMT</pubDate>
