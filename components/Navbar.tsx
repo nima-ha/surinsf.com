@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useI18n } from '@/i18n';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
   const { t, lang, toggleLang } = useI18n();
@@ -35,6 +36,7 @@ export default function Navbar() {
           ))}
         </div>
         <div className="flex items-center gap-3">
+          <ThemeToggle />
           <button onClick={toggleLang} className="text-xs px-3 py-1.5 rounded-full border border-white/20 text-white/70 hover:text-white hover:border-white/50 transition-all">
             {t.common.langSwitch}
           </button>
