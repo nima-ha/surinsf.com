@@ -17,10 +17,14 @@ module.exports = {
           900: '#003d99',
         },
         surface: {
-          DEFAULT: '#0a0a0f',
-          light: '#12121a',
-          lighter: '#1a1a2e',
-          border: '#2a2a3e',
+          DEFAULT: 'var(--color-surface)',
+          light: 'var(--color-surface-light)',
+          lighter: 'var(--color-surface-lighter)',
+          border: 'var(--color-border)',
+        },
+        text: {
+          primary: 'var(--color-text)',
+          muted: 'var(--color-text-muted)',
         },
       },
       fontFamily: {
