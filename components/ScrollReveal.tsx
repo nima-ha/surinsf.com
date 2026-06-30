@@ -14,9 +14,9 @@ export default function ScrollReveal({ children, className = '', delay = 0, dire
     const offset = direction === 'up' ? 80 : direction === 'left' ? 80 : -80;
     const axis = direction === 'up' ? 'y' : 'x';
     gsap.set(el, { opacity: 0, [axis]: offset });
-    const t = gsap.to(el, { opacity: 1, [axis]: 0, duration, delay, ease: 'power3.out' });
-    ScrollTrigger.create({ trigger: el, start: 'top 85%', onEnter: () => t.play(), once: true, onLeave: () => t.pause(0) });
-    return () => { t.kill(); ScrollTrigger.getAll().forEach(st => st.kill()); };
+    const t = gsap.to(el, { opacity: 1, [axis]: 0, duration, delay, ease: 'power3.out', paused: true });
+    const st = ScrollTrigger.create({ trigger: el, start: 'top 85%', onEnter: () => t.play(), onLeaveBack: () => t.reverse() });
+    return () => { t.kill(); st.kill(); };
   }, [delay, direction, duration]);
   return <div ref={ref} className={className}>{children}</div>;
 }
